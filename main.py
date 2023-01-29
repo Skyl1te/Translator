@@ -3,8 +3,6 @@ from translate import Translator
 from colorama import Fore, init
 init()
 
-# list of bad words (you can add words)
-badWords = ['bitch', 'shit', 'пидр', 'сука', 'блять', 'блядь', 'пздабол', 'ебать', 'долбоеб', 'долбоёб']
 
 # color's variables
 quastionColor = Fore.MAGENTA
@@ -19,15 +17,6 @@ while True:
 
     # make user's text lowercase
     text.lower()
-    # check user's text on bad words
-    for word in badWords:
-        word.lower()
-        if word in text:
-            print(Fore.RED + f'Pls, don\'t use this word: {word}')
-            while word in text:
-                text = input(
-                    f'{quastionColor}Enter the text which you want to translate: {userColor}')
-
     # make user's languages lowercase
     fromLang.lower()
     toLang.lower()
